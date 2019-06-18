@@ -2,8 +2,10 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import home from '@/components/home'
 import blog from '@/components/blog'
-import contact from '@/components/contact'
 import services from '@/components/services'
+import contactForm from '@/components/contactForms'
+import userInfo from '@/components/userInfo'
+import companyInfo from '@/components/companyInfo'
 
 Vue.use(Router)
 
@@ -20,9 +22,20 @@ export default new Router({
       component: blog
     },
     {
-      path: '/contact',
-      name: contact,
-      component: contact
+      path: '/contactForm',
+      name: contactForm,
+      component: contactForm,
+
+      children: [{
+        path: '/contactForm/user',
+        name: userInfo,
+        component: userInfo
+      },
+        {
+          path: '/contactForm/company',
+          name: companyInfo,
+          component: companyInfo
+        }]
     },
     {
       path: '/services',

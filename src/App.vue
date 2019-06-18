@@ -19,7 +19,8 @@
             <router-link class="nav-link" to="/services" href="#">Services</router-link>
           </li>
           <li class="nav-item">
-            <router-link class="nav-link" to="/contact" href="#">Contact</router-link>
+            <router-link class="nav-link" to="/contactForm" href="#">Contact</router-link>
+<!--            <router-link to="/contact/contactTab">Form</router-link>-->
           </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
